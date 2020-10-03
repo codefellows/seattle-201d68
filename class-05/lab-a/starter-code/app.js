@@ -135,7 +135,9 @@ Test this function by hand in the console to get it working, and when you think 
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+  if (dynamicArray.length % 2 === 0) {
+    // WILL FINISH AT A LATER TIME
+  }
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
