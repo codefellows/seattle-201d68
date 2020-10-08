@@ -35,7 +35,7 @@ function multiply(a, b) { //eslint-disable-line
 }
 
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
+testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -52,15 +52,19 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  var totalSum = a + b + c;
-  var product = a * b * c;
+  var partialSum = sum(a, b);
+  var totalSum = sum(partialSum[0], c);
+  var partialProduct = multiply(a, b);
+  var product = multiply(partialProduct[0], c);
+  var totalSum = totalSum[0];
+  var product = product[0];
   var strTotalSum = a + ' and ' + b + ' and ' + c + ' sum to ' + totalSum + '.';
   var strProduct = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + product + '.';
   return [totalSum, product, strTotalSum, strProduct];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-testSumAndMultiply(4,7,5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -132,7 +136,7 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+var testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
