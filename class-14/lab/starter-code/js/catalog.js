@@ -1,6 +1,8 @@
-/* global Product, Cart */
-
 'use strict';
+// global Product, Cart
+
+
+
 
 // Set up an empty cart for use on this page.
 var cart = new Cart([]);
@@ -11,8 +13,13 @@ function populateForm() {
 
   //TODO: Add an <option> tag inside the form's select for each product
   var selectElement = document.getElementById('items');
-  for (var i in Product.allProducts) {
-
+  selectElement.setAttribute('name', 'items');
+  var smallOption;
+  for (var i = 0; i < allProducts.length; i++) {
+    smallOption = document.createElement('option');
+    smallOption.setAttribute('value', allProducts[i].name);
+    smallOption.textContent = allProducts[i].name;
+    selectElement.appendChild(smallOption);
   }
 
 }
@@ -25,6 +32,9 @@ function handleSubmit(event) {
   // TODO: Prevent the page from reloading
 
   // Do all the things ...
+
+  var selectedProduct = document.getElementById('items').value;
+  console.log(selectedProduct);
   addSelectedItemToCart();
   cart.saveToLocalStorage();
   updateCounter();
@@ -35,12 +45,13 @@ function handleSubmit(event) {
 // TODO: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
   // TODO: suss out the item picked from the select list
+
   // TODO: get the quantity
   // TODO: using those, add one item to the Cart
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() {}
+function updateCounter() { }
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
@@ -51,9 +62,11 @@ function updateCartPreview() {
 // Set up the "submit" event listener on the form.
 // This is the trigger for the app. When a user "submits" the form, it will
 // Call that handleSubmit method above and kick off the whole process
+console.log(rando);
 var catalogForm = document.getElementById('catalog');
 catalogForm.addEventListener('submit', handleSubmit);
 
 // Before anything else of value can happen, we need to fill in the select
 // drop down list in the form.
+
 populateForm();
