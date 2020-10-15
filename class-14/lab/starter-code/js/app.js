@@ -23,6 +23,7 @@ Cart.prototype.removeItem = function (item) {
 var CartItem = function (product, quantity) {
   this.product = product;
   this.quantity = quantity;
+  cart.items.push(this);
 };
 
 // Product constructor.
