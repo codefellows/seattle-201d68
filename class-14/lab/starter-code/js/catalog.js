@@ -4,7 +4,7 @@
 
 // Set up an empty cart for use on this page.
 var cart = new Cart([]);
-
+var cartArray = [];
 // On screen load, we call this method to put all of the busmall options
 // (the things in the Product.allProducts array) into the drop down list.
 function populateForm() {
@@ -37,23 +37,27 @@ function handleSubmit(event) {
 // TODO: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
   // TODO: suss out the item picked from the select list
-  var chosenProduct = bananas.event.target;
+  //var chosenProduct = itemsLabel.event.selectedIndex;
+  itemsLabel.addEventListener('submit', addSelectedItemToCart);
+  
+  console.log (itemsLabel.event.handleSubmit);
+  
   for (var i = 0; i < allProducts.length; i++) {
     if (chosenProduct === allProducts[i].name) {
-      Cart.push(allProducts[i]);
+      cartArray.push(allProducts[i]);
     }
   }
-  var bananas = document.getElementsByTagName('label');
-  var att = document.createAttribute('class');
-  att.value = 'itemSelector';
-  bananas.setAttributeNode(att);
+  console.log(cartArray);
+  var itemsLabel = document.getElementsByTagName('label');
+  // var att = document.createAttribute('class');
+  // att.value = 'itemSelector';
+  // itemsLabel.setAttributeNode(att);
 
 
   // TODO: get the quantity
   // TODO: using those, add one item to the Cart
 }
 console.log(addSelectedItemToCart());
-bananas.addEventListener('select', addSelectedItemToCart);
 // TODO: Update the cart count in the header nav with the number of items in the Cart
 function updateCounter() { }
 

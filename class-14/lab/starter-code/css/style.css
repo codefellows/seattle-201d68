@@ -13,3 +13,28 @@ tbody{
   padding: 1em;
   margin: 1em;
 }
+body{
+  background-color: lightgray;
+}
+h1{
+  font-size: 2em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* li.nav{
+  display: inline-block;
+  border: 1px solid black;
+  height: 50px;
+  width: 100px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+} */
+
+legend{
+  border: solid 1px black;
+  font-size: 2em;
+  padding: 5px;
+  margin: 5px;
+}
+*{
+  text-align: center;
+}
