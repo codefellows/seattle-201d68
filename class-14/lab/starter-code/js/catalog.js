@@ -21,7 +21,11 @@ function populateForm() {
     smallOption.textContent = allProducts[i].name;
     selectElement.appendChild(smallOption);
   }
-
+  //Created UL List for cart preview
+  var ulParent = document.getElementById('cartContents');
+  var ulElement = document.createElement('ul');
+  ulElement.setAttribute('id', 'cart-preview');
+  ulParent.appendChild(ulElement);
 }
 
 // When someone submits the form, we need to add the selected item to the cart
@@ -45,16 +49,52 @@ function handleSubmit(event) {
 
 
 function addSelectedItemToCart(selectedProduct, selectedQuantity) {
-  new CartItem(selectedProduct, selectedQuantity);
+  new CartItem(selectedProduct, parseInt(selectedQuantity));
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() { }
+function updateCounter() {
+  var counter = 0;        //// May have to make global
+  console.log(cart.items.length);
+  for (var i = 0; i < cart.items.length; i++) {
+    counter += cart.items[i].quantity;
+    console.log(cart.items[i].quantity);
+
+  }
+  var parentElement = document.getElementById('itemCount');
+  parentElement.textContent = `  ${counter} in the Inbox`;
+
+
+
+}
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
   // TODO: Get the item and quantity from the form
   // TODO: Add a new element to the cartContents div with that information
+  //cartContents
+
+
+  var parentElement = document.getElementById('cart-preview');
+  var ULChildArray = parentElement.children;
+  var checkIDArray = [];
+
+  for (var j = 0; j < ULChildArray.length; j++) {
+    checkIDArray.push(ULChildArray[j].getAttribute('id'));
+  }
+
+  for (var i = 0; i < cart.items.length; i++) {
+    // if a product is already in the Cart.  Don't make an LI.
+    console.log('checkIDarray', checkIDArray, 'cart items: ', cart.items[i].product);
+
+    if (!checkIDArray.includes(cart.items[i].product)) {
+      var createLI_Element = document.createElement('li');
+      createLI_Element.setAttribute('id', cart.items[i].product);
+      createLI_Element.textContent = `Item: ${cart.items[i].product}  Qty: ${cart.items[i].quantity}`//The name of the item in the cart and Quantity
+      parentElement.appendChild(createLI_Element);
+    }
+  }
+
 }
 
 // Set up the "submit" event listener on the form.
