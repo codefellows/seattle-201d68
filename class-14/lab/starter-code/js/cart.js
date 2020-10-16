@@ -7,7 +7,7 @@ table.addEventListener('click', removeItemFromCart);
 var cart = new Cart([]);
 
 function loadCart() {  //Retrieve items from local strorage, and convert back to instances.
-
+  // add if statement to deterime if data exsists.  If not output a message.
   var cartItems = JSON.parse(localStorage.getItem('shoppingCart'));
   for (var i = 0; i < cartItems.length; i++) {
     new CartItem(cartItems[i].product, cartItems[i].quantity);
@@ -23,13 +23,39 @@ function renderCart() {
 }
 
 // TODO: Remove all of the rows (tr) in the cart table (tbody)
-function clearCart() { }
+function clearCart() {
+
+  var tagArray = document.getElementsByTagName('tbody');
+  tagArray[0].innerHTML = '';
+}
 
 // TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
 function showCart() {
 
   // TODO: Find the table body
+  var tagArray = document.getElementsByTagName('tbody'); //at index[0]
+  var trElement;
+  var tdDelete;
+  var tdQuantity;
+  var tdItem;
+  for (var i = 0; i < cart.items.length; i++) {
+    trElement = document.createElement('tr');
 
+    tdDelete = document.createElement('td');
+    tdDelete.setAttribute('id', 'deleteBox');
+
+    tdQuantity = document.createElement('td');
+    tdQuantity.textContent = cart.items[i].quantity;
+
+    tdItem = document.createElement('td');
+    tdItem.textContent = cart.items[i].product;
+
+    trElement.appendChild(tdDelete);
+    trElement.appendChild(tdQuantity);
+    trElement.appendChild(tdItem);
+    tagArray[0].appendChild(trElement);
+
+  }
   // TODO: Iterate over the items in the cart
   // TODO: Create a TR
   // TODO: Create a TD for the delete link, quantity,  and the item
