@@ -1,1 +1,71 @@
 /* TODO: Make it awesome */
+
+body {
+  margin: auto;
+  width: 50%;
+}
+
+.copy {
+  font-size: 20px;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  border: black 2px solid;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+a {
+  padding: 10px;
+  font-size: 20px;
+}
+
+li{
+  display: inline-block;
+}
+
+main {
+  border: black 2px solid;
+  min-height: 500px;
+}
+
+footer {
+  border: black 2px solid;
+}
+
+fieldset{
+  border: black 1px solid;
+}
+
+input {
+  padding: 10px;
+  font-size: 20px;
+}
+
+#quantity {
+  width: 20px;
+  height: 10px;
+}
+
+#items {
+  height: 35px;
+  margin-bottom: 10px;
+}
+
+legend{
+  font-size: 42px;
+  height: 75px;
+}
+
+span{
+  font-size: 30px;
+  padding: 15px;
+}
