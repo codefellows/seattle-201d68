@@ -1,4 +1,4 @@
-/* TODO: Make it awesome */
+/* TODO: Make it awesome !!!!!!!!!!*/
 
 #cart{
   border: 2px solid black;
@@ -14,7 +14,7 @@ tbody{
   margin: 1em;
 }
 body{
-  background-color: lightgray;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/bd/Inside_View_of_School_Bus.jpg);
 }
 h1{
   font-size: 2em;
@@ -35,6 +35,21 @@ legend{
   padding: 5px;
   margin: 5px;
 }
+legend:hover{
+  transition: .5s;
+  border-radius: 50%;
+  background-color: magenta;
+  color: limegreen;
+}
 *{
   text-align: center;
+}
+div{
+  background-color: lightblue;
+}
+header{
+  background-color: lightblue;
+}
+footer{
+  background-color: lightblue;
 }
