@@ -1,0 +1,17 @@
+div{
+  border: 2px solid purple;
+  height: 50px;
+  width: 100px;
+  border: 2px solid purple;
+  height: 50px;
+  width: 100px;
+  /* centers text  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body{
+  display: flex;
+  
+}

@@ -1,0 +1,160 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+header h1 {
+  font-size: 24px;
+  color: rgb(247, 109, 4);
+  text-decoration: underline wavy seagreen;
+  padding: 15px 15px 10px 60px;
+}
+
+/* This is the section that is parent to the form. I cannot get it to align with the table. */
+#new-city {
+  position: relative;
+  left: 2px;
+  right: 50px;
+  max-width: 91%;
+}
+
+/* This is the form element */
+#new-city-form {
+  border: 2px solid seagreen;
+  padding: 10px 0 0px 0;
+  max-width: 91%;
+  position: relative;
+  left: 50px;
+  right: 50px; 
+  margin: 0px 0px 25px 0px;
+}
+
+legend {
+  font-size: 18px;
+  color: seagreen;
+  padding: 0 0 10px 10px;
+}
+
+/* This puts an orange border around the header */
+label {
+  color: rgb(247, 109, 4);
+  padding: 0 0 5px 10px;
+}
+
+/* This treats the words "Store Location" as a block-level element, so that the form will drop below it.*/
+label[for="new-store"] {
+  display: block;
+}
+
+input[id="new-store-location"] {
+  margin: 0 0 0 10px;
+  display: block;
+}
+
+/* This is the daily minimum */
+label[for="daily-minimum"] {
+  float: left;
+  position: relative;
+  left: 190px;
+  bottom: 40px;
+}
+/* And the daily minimum's form field */
+input[id="dailymin"] {
+  float: left;
+  position: relative;
+  left: 86px;
+  bottom: 21px;
+}
+
+/* This is the daily maximum */
+label[for="daily-maximum"] {
+  float: left;
+  position: relative;
+  left: 126px;
+  bottom: 40px;
+}
+/* And the daily maximum's form field */
+input[id="dailyMax"] {
+  float: left;
+  position: relative;
+  left: 20px;
+  bottom: 21px;
+}
+
+/* This is the avg daily per customer */
+label[for="average-cookies"] {
+  float: left;
+  position: relative;
+  left: 61px;
+  bottom: 40px;
+}
+/* And the form field for the average daily per customer*/
+input[id="avgCookies"] {
+  float: left;
+  position: relative;
+  left: -140px;
+  bottom: 21px;
+  padding: 0 65px 0 0 ;
+}
+
+/* This is the submit label */
+label[for="submit"] {
+  float: left;
+  position: relative;
+  left: 825px;
+  bottom: 58px;
+}
+/* And this is the submit button */
+input[id="submitbutton"] {
+  float: left;
+  position: relative;
+  left: 780px;
+  bottom: 40px;
+  padding: 0 65px 0 0 ;
+}
+
+
+th {
+  border: 2px solid rgb(247, 109, 4);
+  padding: 10px;
+  width: auto;
+  position: relative;
+  left: -117px;
+  right: 50px; 
+  font-weight: bold;
+}
+
+td {
+  border: 2px solid black;
+  padding: 10px;
+  position: relative;
+  left: -117px;
+  right: 50px;
+}
+
+#hourlyTotals {
+  font-weight: bold;
+  color: seagreen;
+}
+
+a:link {
+  color: seagreen;
+  width: 10px;
+}
+
+a:visited {
+  color: seagreen;
+}
+
+a:hover {
+  color:  rgb(247, 109, 4);
+}
+
+footer a {
+  font-size: 24px;
+  padding: 10px 0px 0px 60px;
+  display: block;
+  text-decoration: underline wavy rgb(247, 109, 4);
+}

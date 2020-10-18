@@ -1,0 +1,38 @@
+<!-- goal: make a form to collect information on a person -->
+
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <header></header>
+    <main>
+      <form id="form">
+        <fieldset>
+          <label>name
+            <input name="username" type="text" />
+          </label>
+
+          <label>What is your story?
+            <textarea name="story" type="text"></textarea>
+          </label>
+
+          <label>How do you like to spend your free time?
+            <input type="checkbox" name="free" value="movies">
+            movies
+            </input>
+            <input type="checkbox" name="free" value="read">
+            read
+            </input>
+            <input type="checkbox" name="free" value="videogames">
+            video games
+            </input>
+          </label>
+        </fieldset>
+
+        <input type="submit"/>
+      </form>
+    </main>
+    <footer></footer>
+    <script src="app.js"></script>
+  </body>
+</html>

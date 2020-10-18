@@ -1,0 +1,180 @@
+body{
+  background-color: salmon;
+}
+header{
+  background-color: rgb(109, 85, 85);
+  height: 200px;
+}
+#logo{
+  height:150px;
+  width: 400px;
+  margin-top: 20px;
+}
+h1{
+  display:inline-block;
+  font-size: 5em;
+  position: absolute;
+  margin-top: 40px;
+  margin-left: 30px;
+  font-family: 'Sansita Swashed', cursive;
+  color: rgb(171, 194, 194);
+  text-shadow: salmon 3px 2px;
+  border: dotted 5px rgb(171, 194, 194);
+  padding: 0px 10px 10px 10px;
+}
+h2{
+  display:inline-block;
+  position: absolute;
+  margin-top: 150px;
+  margin-left: 190px;
+  font-family: 'Sansita Swashed', cursive;
+  color: rgb(171, 194, 194);
+  font-size: 1.5em;
+}
+
+#fish{
+  float:left;
+  margin-top: 50px;
+  width: 350px;
+  height: 250px;
+  border-radius: 150px;
+  border: inset 10px rgb(171, 194, 194);
+}
+#locationsheader{
+  font-size: 1.5em;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+#locations{
+  width: 460px;
+  height: 320px;
+  position: absolute;
+  margin-left: 365px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 10px;
+  background-color:rgb(196, 145, 145);
+  color:rgb(109, 85, 85);
+  text-shadow: rgb(171, 194, 194) 1px 1px; 
+  font-family: Arial, Helvetica, sans-serif;
+  border: rgb(171, 194, 194)  10px outset;
+}
+.location{
+  display:inline-block;
+  padding: 10px;
+
+}
+#hoursopen{
+  position:absolute;
+  margin-top: 300px;
+  margin-left: 105px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color:rgb(109, 85, 85);
+  color: rgb(171, 194, 194) ;
+  padding: 20px;
+}
+#chinook{
+  margin-top: 50px;
+  float:right;
+  width: 400px;
+  height: 250px;
+  border-radius: 150px; 
+  border: inset 10px rgb(171, 194, 194) ;
+}
+#aboutussection{
+  position: absolute;
+  margin-top: 400px;
+  height: 220px;
+}
+#family{
+  position: absolute;
+  height: 200px;
+  border-radius: 100px;
+  border: inset 10px rgb(171, 194, 194) ;
+}
+#aboutus{
+  width: 500px;
+}
+#aboutusheader{
+  text-align: center;
+  margin: 150px;
+  font-size: 2em;
+  font-family: 'Sansita Swashed', cursive;
+  padding-bottom: 50px;
+  color: rgb(109, 85, 85);
+  text-shadow: salmon 3px 2px;
+}
+#aboutuscontent{
+  position: absolute;
+  height: 325px;
+  width: 475px;
+  overflow: scroll;
+  margin-left: 370px;
+  background-color: rgb(196, 145, 145);
+  color: rgb(171, 194, 194) ;
+  text-shadow:rgb(109, 85, 85) 2px 2px;
+  font-size: 1.2em;
+  border: rgb(171, 194, 194) 10px outset;
+}
+#cutter{
+  position: absolute;
+  margin-left: 1000px;
+  height: 100px;
+  border-radius: 100px;
+  border: inset 10px rgb(171, 194, 194);
+}
+#frosted{
+  position: absolute;
+  margin-left: 900px;
+  margin-top: 120px;
+  border-radius: 100px;
+  border: inset 10px rgb(171, 194, 194);
+}
+#merchsection{
+  position: absolute;
+}
+#shirt{
+  position: absolute;
+  margin-top: 800px;
+  margin-right: 1000px;
+  border-radius: 120px;
+  border: inset 10px rgb(171, 194, 194);
+}
+#merch{
+  position: absolute;
+  height: 200px;
+  width: 800px;
+  margin-top: 800px;
+  margin-left: 400px;
+  font-size: 5em;
+  text-align: center;
+  padding-top: 100px;
+  background-color: rgb(196, 145, 145);
+  font-family: 'Sansita Swashed', cursive;
+  color: rgb(109, 85, 85);
+  text-shadow: salmon 3px 2px;
+  border: outset 10px rgb(171, 194, 194);
+}
+#soon{
+  display: block;
+  font-size: .5em;
+  color: rgb(109, 85, 85);
+  text-shadow: rgb(171, 194, 194);
+}
+#footerblock{
+  position: absolute;
+  margin-top: 1200px;
+  height: 200px;
+  width: 1300px;
+  background-color: rgb(109, 85, 85);
+}
+.footerinfo{
+  display:inline-block;
+  margin: 70px;
+  font-size: 1.5em;
+  color: rgb(171, 194, 194);
+  text-shadow: salmon 1px 1px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+

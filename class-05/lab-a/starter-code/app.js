@@ -31,11 +31,9 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
   var product = a * b;
-  console.log(product);
-  var string = 'The product of ' + a + ' and ' + b + ' is ' + product + '.'
-  console.log(string);
-  var array = [product, string];
-  return array;
+  // var string = "The product of " + a + " and " + b + " is " + product + "."
+  var string = `The product of ${a} and ${b} is ${product}.` // template literal
+  return [product, string];
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -127,10 +125,19 @@ Test this function by hand in the console to get it working, and when you think 
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+  var totalProduct = 1;
+  for(var i=0; i<dynamicArray.length; i++){
+    //multiply() => [product, string] if I only want the product, I need to do multiply()[0]
+    totalProduct = multiply(totalProduct, dynamicArray[i])[0]; // 1 * 1 = 1, 1 * 2 = 2, 2 * 3 = 6, 6 * 4 = 24, 24 * 5 = 120. 
+    // totalProduct = 120;
+  }
 
+  var string = `The numbers ${dynamicArray} have a product of ${totalProduct}.`;
+
+  return [totalProduct, string];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.

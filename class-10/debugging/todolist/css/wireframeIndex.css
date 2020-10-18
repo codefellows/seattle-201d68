@@ -1,0 +1,85 @@
+header {
+  text-align: center;
+}
+
+form {
+  padding: 20px;
+}
+
+footer {
+  height: 100px;
+  width: 100%;
+  background-color: gray;
+  position: absolute;
+  bottom: 0px;
+}
+
+#avatar {
+  float:left;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+#logo {
+  text-align: center;
+  padding: 20px;
+}
+
+#quote img {
+  padding: 20px;
+}
+
+#lists {
+  margin:auto;
+  width: 90%;
+}
+
+#dailies {
+  float: left;
+  width: 40%;
+  padding: 20px;
+  min-height: 200px;
+  background-color: gray;
+  margin-left: 20px;
+}
+
+#character {
+  padding: 20px;
+  float: left;
+}
+
+#stats {
+  width: 50%;
+  float: right;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 400px;
+  padding: 20px;
+  background-color: gray;
+}
+
+#stats li {
+  width: 90%;
+}
+
+li {
+  width: 200px;
+  height: 50px;
+  margin-top: 20px;
+  line-height: 50px;
+  text-align: center;
+  background-color: lightgray;
+}
+
+#todo {
+  float: right;
+  width: 40%;
+  padding: 20px;
+  min-height: 200px;
+  background-color: gray;
+}
+
+.clear {
+  clear:both;
+}

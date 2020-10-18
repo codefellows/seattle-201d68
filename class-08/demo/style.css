@@ -1,0 +1,21 @@
+#top-section-header{
+  background-color: #eee;
+  border: 3px solid black;
+  position: relative;
+  height: 54px;
+}
+
+#top-section-header h3{
+  text-align: center;
+  font-size: .5em;
+  padding-bottom: 4px;
+}
+
+.arrow{
+  margin: 3px;
+  margin: 5px 3px;
+}
+
+#top-section-header div{
+ position: absolute;
+}

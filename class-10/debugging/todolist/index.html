@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The List Keeper</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/fireworks.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div id="fireSentence" class="junk">
+            <!-- <button id="fireworksOnOff">Go You!</button> -->
+        </div>
+        <div id="avatarLogo">
+            <div id="totalAvatar"> 
+                <a href ="character.html">
+                    <div id="avatar">
+                        <img id = 'slideimg0' class = "forceShow" src="sick-girl.png" alt="">
+                        <img id = 'slideimg1' class = "forceHide" src="farmer.png" alt="" >
+                    </div>
+                </a>
+            </div>
+        
+            <div id="logo">
+                <img src="logo.png" />
+            </div>
+        </div>
+        <div id="quote" class="clear">
+        </div>
+    </header>
+
+<main>
+    <div id="dailies" class="clear" class="goalsList">
+        <form class="add">
+            <fieldset id="dailyFeildset">
+                <legend id="dailyLegend"> Daily tasks </legend>
+    
+                <label for="taskDaily">
+                    <input id="addDaily" type="submit" value="Add Daily">
+                </label>
+            </fieldset>
+        </form>
+
+        <!-- The Daily Modal -->
+        <div id="dailyModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="dailyWarning">Test message</p>
+            <form id="dailyForm">
+                <fieldset>
+                    <label> Task Name:
+                        <input type="text" name="taskname">
+                    </label>
+                    <label>Difficulity
+                        <select name="difficulity">
+                            <option value="easy">easy</option>
+                            <option value="medium">medium</option>
+                            <option value="hard">hard</option>
+                        </select>
+                    </label>
+                    <input id="dailyButton" type="submit" value="Submit">
+                </fieldset>
+            </form>
+        </div>
+  
+    </div>
+    <!-- The Daily Detail Modal -->
+    <div id="dailyDetailModal" class="modal">
+
+        <!-- Detail Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="dailyDetails">
+                <fieldset>
+                    <label> Task Name:
+                        <input id = "dailyDetailTaskName" type="text" name="taskname" placeholder="task name">
+                    </label>
+                    <label>Difficulity
+                        <select id="dailyDetailTaskDifficulty" name="difficulity" selected="">
+                            <option value="easy">easy</option>
+                            <option value="medium">medium</option>
+                            <option value="hard">hard</option>
+                        </select>
+                    </label>
+                    <input id="dailyDetailsButton" type="submit" value="Submit Changes">
+                    <input id="dailyDeleteButton" type="reset" value="Delete This Task">
+                </fieldset>
+            </form>
+        </div>
+  
+    </div>
+
+    </div>
+    <div id="todos" class="goalsList">
+
+        <form id="longTerm" class="add">
+            <fieldset>
+                <legend id="todoLegend">To-Dos</legend>
+    
+                <label for="taskLong">
+                    <input id="addTodo" type="submit" value="Add To Do">
+                </label>
+            </fieldset>
+        </form>
+
+        <!-- The ToDo Modal -->
+        <div id="todoModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p id="todoWarning">Test message</p>
+                    <form id="todoForm">
+                        <fieldset>
+                            <label> Task Name:
+                                <input type="text" name="taskname">
+                            </label>
+                            <label> Description:
+                                <input type="text" name="taskdescription">
+                            </label>
+                            <label> Due Date:
+                                <input type="date" name="dueDate">
+                            </label>
+                            <label>Difficulity
+                                <select name="difficulity">
+                                    <option value="easy">easy</option>
+                                    <option value="medium">medium</option>
+                                    <option value="hard">hard</option>
+                                </select>
+                            </label>
+                            <input id="todoButton" type="submit" value="Submit">
+                        </fieldset>
+                    </form>
+                </div>
+    
+        </div>
+    </div>
+    <div id="intakeModal">
+        <!-- Intake Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div>
+                <h3>Welcome to The List Keeper!</h3>
+                <p>In the "To Do Section" - keep track of all the things that need doing in your life</p>
+                <p>In the "Daily Tasks Section" - keep track of things you want to do everyday to build better habits.</p>
+                <p>Each goal get assigned "easy", "medium", or "hard". Hard tasks are worth more experience points than easy tasks. The more experience points you earn the better your avatar does. Earn enough points, and you can level up! </p>
+                <p>We've got some starter goals suggested for you based on your what goals are most important to you.</p>          
+            </div>
+            <form id="intakeForm">
+                <fieldset>
+                    <label> Name:
+                        <input id="formName" type="text" name="userName">
+                    </label>
+                    <label>What goal is most important to you?
+                        <select name="starterGoals">
+                            <option value="health">Improve My Health</option>
+                            <option value="balance">More Balance In My Life</option>
+                        </select>
+                    </label>
+                    <input id="intakeButton" type="submit" value="Submit">
+                </fieldset>
+            </form>
+        </div>
+        
+    </div>
+
+    <!-- The Todo Detail Modal -->
+    <div id="todoDetailModal" class="modal">
+
+        <!-- Detail Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="todoDetails">
+                <fieldset>
+                    <label> Task Name:
+                        <input id="todoDetailTaskName" type="text" name="taskname">
+                    </label>
+                    <label> Description:
+                        <input id="todoDetailTaskDesc" type="text" name="taskdescription">
+                    </label>
+                    <label> Due Date:
+                        <input id="todoDetailDueDate" type="date" name="dueDate">
+                    </label>
+                    <label>Difficulity
+                        <select id="todoDetailTaskDifficulty" name="difficulity">
+                            <option value="easy">easy</option>
+                            <option value="medium">medium</option>
+                            <option value="hard">hard</option>
+                        </select>
+                    </label>
+                    <input id="todoDetailButton" type="submit" value="Submit changes">
+                    <input id="todoDeleteButton" type="reset" value="Delete This Task">
+                </fieldset>
+            </form>
+        </div>
+  
+    </div>
+</main>
+<div class="clear">
+    <footer>  
+        <p>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
+    </footer>
+    <script src="js/app.js"></script>
+    <script src="js/quote.js"></script>
+    <script src="js/style.js"></script>
+    <script src="js/intake.js"></script>
+    <script src="js/avatar.js"></script>
+</div>
+
+</body>
+
+</html>
